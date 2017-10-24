@@ -12,8 +12,8 @@ $ npm install uk-time
 
 There are two methods:
 
-* `toUkTime(dateTimeString, [outputStringFormat])` - parses the input string as a UTC datetime and converts it to a string of the equivalent datetime in the UK. It will format the output string with the given template, defaulting to ISO format.
-* `fromUkTime(dateTimeString, [outputStringFormat])` - parses the input string as a UK datetime and converts it to a string of the equivalent UTC datetime. It will format the output string with the given template, defaulting to ISO format.
+* `toUKTime(dateTimeString, [outputStringFormat])` - parses the input string as a UTC datetime and converts it to a string of the equivalent datetime in the UK. It will format the output string with the given template, defaulting to ISO format.
+* `fromUKTime(dateTimeString, [outputStringFormat])` - parses the input string as a UK datetime and converts it to a string of the equivalent UTC datetime. It will format the output string with the given template, defaulting to ISO format.
 
 ### Examples
 ```js
