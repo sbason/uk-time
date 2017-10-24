@@ -1,6 +1,4 @@
-'use strict';
-
-const dateFormat = require('dateFormat');
+import dateFormat from 'dateFormat';
 
 function getLastSundayOfMonth(year, month) {
   const lastSunday = new Date();
@@ -86,4 +84,5 @@ function fromUKTime(UTCDateTimeString, format) {
   return dateFormat(addHoursDuringBST(UTCDateTimeString, -1), getDateFormat(format));
 }
 
-module.exports = { toUKTime, fromUKTime };
+export { fromUKTime };
+export { toUKTime };

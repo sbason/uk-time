@@ -1,4 +1,3 @@
-'use strict';
 const convert = require('../');
 const assert = require('assert');
 

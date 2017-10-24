@@ -2,11 +2,17 @@
   "name": "uk-time",
   "version": "1.0.1",
   "description": "Convert UTC time to UK time and vice versa",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
   "scripts": {
+    "pretest": "npm run build",
     "test": "mocha",
     "posttest": "npm run lint",
-    "lint": "eslint ."
+    "clean": "rm -fR ./dist",
+    "lint": "eslint .",
+    "build": "mkdir -p dist && babel index.js --out-file dist/index.js",
+    "prepare" : "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,13 +26,18 @@
   "license": "ISC",
   "devDependencies": {
     "assert": "^1.4.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "eslint": "^4.9.0",
     "eslint-config-iplayer-es6": "^3.1.0",
     "eslint-plugin-mocha": "^4.11.0",
     "mocha": "^4.0.1"
   },
   "eslintConfig": {
-    "extends": "iplayer-es6"
+    "extends": "iplayer-es6",
+    "parserOptions": {
+      "sourceType": "module"
+    }
   },
   "dependencies": {
     "dateformat": "^3.0.2"
