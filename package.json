@@ -1,13 +1,21 @@
 {
   "name": "uk-time",
-  "version": "1.0.0",
-  "description": "Convert UTC ISO time to UK time",
+  "version": "1.0.1",
+  "description": "Convert UTC time to UK time and vice versa",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "posttest": "npm run lint",
     "lint": "eslint ."
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbason/uk-time.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sbason/uk-time/issues"
+  },
+  "homepage": "https://github.com/sbason/uk-time",
   "author": "sbason",
   "license": "ISC",
   "devDependencies": {
