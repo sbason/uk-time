@@ -1,0 +1,26 @@
+{
+  "name": "uk-time",
+  "version": "1.0.0",
+  "description": "Convert UTC ISO time to UK time",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "posttest": "npm run lint",
+    "lint": "eslint ."
+  },
+  "author": "sbason",
+  "license": "ISC",
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "eslint": "^4.9.0",
+    "eslint-config-iplayer-es6": "^3.1.0",
+    "eslint-plugin-mocha": "^4.11.0",
+    "mocha": "^4.0.1"
+  },
+  "eslintConfig": {
+    "extends": "iplayer-es6"
+  },
+  "dependencies": {
+    "dateformat": "^3.0.2"
+  }
+}
