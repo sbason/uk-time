@@ -1,4 +1,5 @@
 # uk-time
+[![Build Status](https://travis-ci.org/sbason/uk-time.svg?branch=master)](https://travis-ci.org/sbason/uk-time)
 
 A Javascript module purely for converting to and from UK time.
 
