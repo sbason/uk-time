@@ -4,5 +4,4 @@ node_js:
 install:
   - npm install
 script:
-  - ls node_modules
   - npm test

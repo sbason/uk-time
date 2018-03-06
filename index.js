@@ -1,4 +1,4 @@
-import dateFormat from 'dateFormat';
+import dateformat from 'dateformat';
 
 function getLastSundayOfMonth(year, month) {
   const lastSunday = new Date();
@@ -74,14 +74,14 @@ function toUKTime(UTCDateTimeString, format) {
   if (!isValidDateTimeString(UTCDateTimeString)) {
     return;
   }
-  return dateFormat(addHoursDuringBST(UTCDateTimeString, 1), getDateFormat(format));
+  return dateformat(addHoursDuringBST(UTCDateTimeString, 1), getDateFormat(format));
 }
 
 function fromUKTime(UTCDateTimeString, format) {
   if (!isValidDateTimeString(UTCDateTimeString)) {
     return;
   }
-  return dateFormat(addHoursDuringBST(UTCDateTimeString, -1), getDateFormat(format));
+  return dateformat(addHoursDuringBST(UTCDateTimeString, -1), getDateFormat(format));
 }
 
 export { fromUKTime };
