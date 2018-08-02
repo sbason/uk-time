@@ -3,16 +3,19 @@
   "version": "1.1.2",
   "description": "Convert UTC time to UK time and vice versa",
   "main": "dist/index.js",
-  "module": "index.js",
-  "jsnext:main": "index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
   "scripts": {
     "pretest": "npm run build",
     "test": "mocha",
     "posttest": "npm run lint",
     "clean": "rm -fR ./dist",
     "lint": "eslint .",
-    "build": "mkdir -p dist && babel index.js --out-file dist/index.js",
-    "prepare": "npm run clean && npm run build"
+    "build": "npm run build:commonjs && npm run build:es",
+    "build:commonjs": "NODE_ENV=commonjs babel -d dist/ index.js",
+    "build:es": "babel -d es/ index.js",
+    "prepare": "npm run clean && npm run build",
+    "prepublish": "npm run prepare"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.26.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "eslint": "^4.9.0",
     "eslint-config-iplayer-es6": "^3.1.0",
