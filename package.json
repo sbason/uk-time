@@ -9,13 +9,12 @@
     "pretest": "npm run build",
     "test": "mocha",
     "posttest": "npm run lint",
-    "clean": "rm -fR ./dist",
+    "clean": "rm -fR ./dist ./es",
     "lint": "eslint .",
     "build": "npm run build:commonjs && npm run build:es",
     "build:commonjs": "NODE_ENV=commonjs babel -d dist/ index.js",
     "build:es": "babel -d es/ index.js",
-    "prepare": "npm run clean && npm run build",
-    "prepublish": "npm run prepare"
+    "prepare": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
