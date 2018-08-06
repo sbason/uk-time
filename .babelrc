@@ -1,5 +1,8 @@
 {
-  "plugins": ["transform-es2015-block-scoping"],
+  "plugins": [
+    "transform-es2015-block-scoping",
+    "transform-es2015-template-literals"
+  ],
   "env": {
     "commonjs": {
       "plugins": ["transform-es2015-modules-commonjs"]
