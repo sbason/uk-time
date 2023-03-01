@@ -35,7 +35,7 @@
     "eslint": "^4.9.0",
     "eslint-config-iplayer-es6": "^3.1.0",
     "eslint-plugin-mocha": "^4.11.0",
-    "mocha": "^4.0.1"
+    "mocha": "^10.2.0"
   },
   "eslintConfig": {
     "extends": "iplayer-es6",
